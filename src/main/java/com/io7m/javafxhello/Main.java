@@ -1,18 +1,10 @@
 package com.io7m.javafxhello;
 
 import javafx.application.Application;
-import javafx.stage.Stage;
 
-public final class Main extends Application
+public final class Main
 {
   private Main()
-  {
-
-  }
-
-  @Override
-  public void start(
-    final Stage stage)
   {
 
   }
@@ -20,6 +12,12 @@ public final class Main extends Application
   public static void main(
     final String[] args)
   {
-    launch(args);
+    /*
+     * Non-modular applications must specify the application class explicitly rather
+     * than allowing the launcher to use reflection to try to instantiate and start
+     * an application.
+     */
+
+    Application.launch(ExampleApplication.class, args);
   }
 }
